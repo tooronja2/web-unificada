@@ -1,10 +1,16 @@
 {
-  "buildCommand": "echo 'No build needed for static site'",
-  "outputDirectory": ".",
-  "installCommand": "echo 'No dependencies to install'",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
     {
       "source": "/css/(.*)",
       "headers": [
@@ -31,13 +37,6 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/index-unified.html",
-      "destination": "/",
-      "permanent": true
     }
   ]
 }

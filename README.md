@@ -31,12 +31,12 @@ Una landing page que combina tres proyectos web independientes en una experienci
 │   ├── pixel-hive.webflow.shared.6a98837a7.css
 │   └── growflix.webflow.6be85dae4.css
 ├── js/                        # Scripts de los 3 proyectos
-├── images/                    # Imágenes organizadas
-│   ├── (imágenes del proyecto principal)
-│   ├── proyecto2/             # Imágenes de Pixel Hive
-│   └── proyecto3/             # Imágenes de Growflix
+├── images/                    # Imágenes del proyecto principal
+├── Para Unir/                 # Recursos de proyectos originales
+│   ├── Dona-Partes-2/         # Recursos de Pixel Hive
+│   └── Elemento-3d/           # Recursos de Growflix
 ├── package.json               # Configuración del proyecto
-├── vercel.json               # Configuración de Vercel
+├── vercel.json               # Configuración de Vercel optimizada
 ├── .gitignore                # Archivos a ignorar en Git
 ├── README.md                 # Documentación principal
 └── UNIFICACION_DOCUMENTACION.md # Documentación técnica
@@ -61,15 +61,19 @@ Una landing page que combina tres proyectos web independientes en una experienci
 
 ## 🚀 Deploy en Vercel
 
-1. **Fork este repositorio**
+1. **Proyecto listo para deploy**:
+   - El archivo principal ya está nombrado como `index.html`
+   - Todas las rutas son relativas (no empiezan con `/`)
+   - Archivos innecesarios eliminados
+
 2. **Conecta con Vercel**:
    - Ve a [vercel.com](https://vercel.com)
    - Conecta tu cuenta de GitHub
    - Importa este repositorio
    - Deploy automático
 
-3. **Configuración automática**:
-   - El archivo `vercel.json` ya está configurado
+3. **Configuración optimizada**:
+   - El archivo `vercel.json` incluye cache headers optimizados
    - URLs limpias habilitadas
    - Trailing slashes deshabilitados
 
