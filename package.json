@@ -1,0 +1,33 @@
+{
+  "name": "landing-page-unificada",
+  "version": "1.0.0",
+  "description": "Landing page unificada que combina tres proyectos web independientes",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --listen 3000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod",
+    "preview": "vercel"
+  },
+  "keywords": [
+    "landing-page",
+    "webflow",
+    "unified",
+    "responsive",
+    "scroll-snap"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuusuario/tu-repo.git"
+  },
+  "homepage": "https://tu-proyecto.vercel.app",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
