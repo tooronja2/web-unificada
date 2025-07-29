@@ -3,12 +3,26 @@
     <head> 
         <meta charset="UTF-8"> 
         <title>Web Unificada - 3 páginas consecutivas</title>         
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Preconnect a dominios externos -->
+        <link rel="preconnect" href="https://cdn.prod.website-files.com" crossorigin>
+        <link rel="preconnect" href="https://prod.spline.design" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <!-- DNS prefetch para mejores tiempos de carga -->
+        <link rel="dns-prefetch" href="//cdn.prod.website-files.com">
+        <link rel="dns-prefetch" href="//prod.spline.design">
+         
         <!-- TODOS los CSS de los tres sites -->         
-        <link rel="stylesheet" href="css/pixel-hive.webflow.shared.6a98837a7.css"> 
-        <link rel="stylesheet" href="css/growflix.webflow.6be85dae4.css"> 
-        <link rel="stylesheet" href="css/kitpro-juke.webflow.shared.12889bc9f.min.css"> 
-    </head>     
+        <link rel="preload" href="css/pixel-hive.webflow.shared.6a98837a7.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="css/pixel-hive.webflow.shared.6a98837a7.css"></noscript>
+        <link rel="preload" href="css/growflix.webflow.6be85dae4.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="css/growflix.webflow.6be85dae4.css"></noscript>
+        <link rel="preload" href="css/kitpro-juke.webflow.shared.12889bc9f.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="css/kitpro-juke.webflow.shared.12889bc9f.min.css"></noscript>
+    </head>
     <body> 
         <div class="section-wrapper"> 
             <div class="snap-section-wrap"> 
@@ -280,9 +294,9 @@
                                     </div>                                     
                                     <img alt="sample shape" class="home-hero-video none" loading="lazy" sizes="(max-width: 767px) 100vw, 670.0000610351562px" src="/images/67fe504dddc5844f1c969af5_Screenshot%20(381).png.webp" srcset="/images/67fe504dddc5844f1c969af5_Screenshot%20(381).png-p-500.webp 500w, /images/67fe504dddc5844f1c969af5_Screenshot%20(381).png.webp 670w"/> 
                                     <div class="home-hero-video none w-background-video w-background-video-atom" data-autoplay="true" data-loop="true" data-poster-url="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-transcode.mp4,https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-transcode.webm" data-wf-ignore="true"> 
-                                        <video autoplay="" data-object-fit="cover" data-wf-ignore="true" id="5f02ccf1-f03b-959a-561a-f77fed63968c-video" loop="" muted="" playsinline="" style='background-image:url("/images/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-poster-00001.jpg")'> 
-                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-transcode.mp4"/> 
-                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-transcode.webm"/> 
+                                        <video autoplay="" data-object-fit="cover" data-wf-ignore="true" id="5f02ccf1-f03b-959a-561a-f77fed63968c-video" loop="" muted="" playsinline="" preload="metadata" style='background-image:url("/images/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-poster-00001.jpg")'> 
+                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-transcode.webm" type="video/webm"/> 
+                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6809766e503ac4bf1495706f_1%20%281%29-transcode.mp4" type="video/mp4"/> 
                                         </video>                                         
                                     </div>                                     
                                 </div>                                 
@@ -664,9 +678,9 @@
                                                 </div>                                                 
                                                 <div class="service-item-image-box" id="w-node-b08430e3-aa8c-4baa-7c32-7584801ab65c-32eb7fa3"> 
                                                     <div class="service-item-image w-background-video w-background-video-atom" data-autoplay="true" data-loop="true" data-poster-url="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-transcode.mp4,https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-transcode.webm" data-wf-ignore="true"> 
-                                                        <video autoplay="" data-object-fit="cover" data-wf-ignore="true" id="17f90896-a221-9787-3794-c6ec999cb35f-video" loop="" muted="" playsinline="" style='background-image:url("/images/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-poster-00001.jpg")'> 
-                                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-transcode.mp4"/> 
-                                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-transcode.webm"/> 
+                                                        <video autoplay="" data-object-fit="cover" data-wf-ignore="true" id="17f90896-a221-9787-3794-c6ec999cb35f-video" loop="" muted="" playsinline="" preload="metadata" style='background-image:url("/images/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-poster-00001.jpg")'> 
+                                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-transcode.webm" type="video/webm"/> 
+                                                            <source data-wf-ignore="true" src="https://cdn.prod.website-files.com/67fe25b72ba200f832eb7fce%2F6813312e77b7a1bfb863b219_untitled%20%2814%29-transcode.mp4" type="video/mp4"/> 
                                                         </video>                                                         
                                                     </div>                                                     
                                                 </div>                                                 
@@ -2137,6 +2151,13 @@
       }
     }
   });
-</script>                 
+</script>
+
+<!-- Scripts de optimización de rendimiento -->
+<script async src="js/performance-optimizer.js"></script>
+<script async src="js/spline-optimizer.js"></script>
+<script async src="js/font-optimizer.js"></script>
+<script async src="js/asset-compressor.js"></script>
+                 
             </body>             
         </html>
