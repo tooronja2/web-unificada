@@ -1,0 +1,77 @@
+/* Digistrata Theme CSS */
+:root {
+  /* Primary colors */
+  --primary-color: #0072C6;
+  --secondary-color: #00BFFF;
+  --accent-color: #F7941D;
+  
+  /* Text colors */
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-light: #FFFFFF;
+  
+  /* Background colors */
+  --bg-light: #F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-dark: #333333;
+}
+
+/* Global Typography */
+body {
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .heading-style-h1, .heading-style-h2, .heading-style-h3 {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+}
+
+/* Primary buttons */
+.front-button {
+  background-color: var(--primary-color);
+}
+
+.back-button {
+  background-color: var(--accent-color);
+}
+
+/* Text colors */
+.heading-style-h1, .heading-style-h2, .heading-style-h3 {
+  color: var(--primary-color);
+}
+
+.text-color-alternate {
+  color: var(--secondary-color);
+}
+
+/* Links */
+.link-text {
+  color: var(--primary-color);
+}
+
+.link-text.bottom-hover, .link-text.is-hover {
+  color: var(--accent-color);
+}
+
+/* Service sections */
+.service-text {
+  color: var(--text-primary);
+}
+
+.service-number {
+  color: var(--primary-color);
+}
+
+.scroll-text {
+  color: var(--secondary-color);
+}
+
+/* Stats section */
+.about-number {
+  color: var(--accent-color);
+}
+
+/* Case studies */
+.case-name {
+  color: var(--text-light);
+}
