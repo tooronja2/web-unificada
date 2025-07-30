@@ -28,6 +28,25 @@
         <!-- Digistrata theme CSS -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/digistrata-theme.css">
+        <style>
+            /* Forzar fondo negro en toda la web */
+            html, body, .section-wrapper, .page-wrapper, .main-wrapper, section, .section {
+                background-color: #000000 !important;
+                color: #FFFFFF !important;
+            }
+            
+            /* Hacer transparentes los fondos de las animaciones de texto */
+            .text-overflow-hidden, .heading-text-part, .text-shadow, 
+            .scrolling-text-wrapper, .scroll-text-item, .heading-text-box {
+                background: transparent !important;
+            }
+            
+            /* Asegurar que los vídeos tengan un overlay oscuro */
+            .service-item-image video {
+                opacity: 0.8;
+                mix-blend-mode: luminosity;
+            }
+        </style>
     </head>
     <body> 
         <div class="section-wrapper"> 

@@ -6,19 +6,27 @@
   --accent-color: #F7941D;
   
   /* Text colors */
-  --text-primary: #333333;
-  --text-secondary: #555555;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
   --text-light: #FFFFFF;
   
   /* Background colors */
-  --bg-light: #F5F5F5;
-  --bg-white: #FFFFFF;
-  --bg-dark: #333333;
+  --bg-light: #000000;
+  --bg-white: #000000;
+  --bg-dark: #000000;
+  --bg-black: #000000;
+}
+
+/* Fondo negro global */
+html, body {
+  background-color: #000000 !important;
+  color: #FFFFFF;
 }
 
 /* Global Typography */
 body {
   font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+  background-color: #000000 !important;
 }
 
 h1, h2, h3, h4, h5, h6, .heading-style-h1, .heading-style-h2, .heading-style-h3 {
@@ -74,4 +82,96 @@ h1, h2, h3, h4, h5, h6, .heading-style-h1, .heading-style-h2, .heading-style-h3 
 /* Case studies */
 .case-name {
   color: var(--text-light);
+}
+
+/* =========== FONDOS NEGROS Y ANIMACIONES TRANSPARENTES =========== */
+
+/* Fondos globales negros */
+.section-wrapper,
+.page-wrapper,
+.main-wrapper,
+.snap-section-wrap,
+section,
+.section,
+.padding-global,
+.container-large,
+.header,
+.footer,
+.about,
+.hero,
+.navbar-section,
+.service-section-main-box,
+.insights-section-main-box,
+.cta-section,
+.text-box-header,
+.text-box-footer,
+.back-to-top-loader {
+  background-color: #000000 !important;
+}
+
+/* Fondos transparentes para animaciones de texto */
+.text-overflow-hidden,
+.heading-text-part,
+.text-shadow,
+.scrolling-text-wrapper,
+.scrolling-text-overflow,
+.scroll-text-item,
+.heading-text-box,
+.insight-big-number,
+.section-header-tag div,
+.text-gradient,
+.text-box-header,
+.hero-paragraph p {
+  background: transparent !important;
+}
+
+/* Asegurar que los videos de fondo tengan overlay negro */
+.service-item-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5) !important;
+  z-index: 1;
+}
+
+/* Asegurarse que las tarjetas tengan fondo negro */
+.card-frame,
+.insight-card,
+.service-card-frame,
+.service-item-content,
+.insight-item-content {
+  background-color: #000000 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Contenedores específicos que necesitan fondo negro */
+.service-description-wrapper,
+.insights-sticky-frame,
+.insight-stats,
+.insight-stat-wrapper,
+.insight-stat-col {
+  background-color: #000000 !important;
+}
+
+/* Asegurarse que todos los textos sean legibles en fondo negro */
+p, h1, h2, h3, h4, h5, h6, div, span, a {
+  color: #ffffff;
+}
+
+/* Gradientes de texto en fondo negro */
+.text-gradient {
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.6)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Asegurarse que las sombras de texto sean transparentes */
+.text-shadow.first,
+.text-shadow.second {
+  background: transparent !important;
+  opacity: 0.3;
 }
