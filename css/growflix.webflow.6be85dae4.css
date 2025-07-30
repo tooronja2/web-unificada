@@ -6348,19 +6348,45 @@ blockquote {
 }
 
 .service-wrapper._01 {
-  background-color: var(--pink);
+  background-color: #ffffff;
 }
 
 .service-wrapper._02 {
-  background-color: var(--purple);
+  background-color: #000000;
 }
 
 .service-wrapper._03 {
-  background-color: var(--yellow);
+  background-color: #ffffff;
 }
 
 .service-wrapper._04 {
-  background-color: var(--blue);
+  background-color: #000000;
+}
+
+/* Text color adjustments for black backgrounds */
+.service-wrapper._02 .service-number,
+.service-wrapper._04 .service-number {
+  color: #ffffff;
+}
+
+.service-wrapper._02 .scroll-text,
+.service-wrapper._04 .scroll-text {
+  color: #ffffff;
+}
+
+.service-wrapper._02 .text-size-small,
+.service-wrapper._04 .text-size-small {
+  color: #ffffff;
+}
+
+.service-wrapper._02 .service-text,
+.service-wrapper._04 .service-text {
+  color: #ffffff;
+}
+
+.service-wrapper._02 .text-button,
+.service-wrapper._04 .text-button {
+  color: #ffffff;
 }
 
 .section-home-intro-01 {
