@@ -5107,7 +5107,7 @@ blockquote {
 }
 
 .section-home-header-01 {
-  background-color: var(--grey-01);
+  background-color: #000000;
   position: sticky;
   top: 0;
   overflow: clip;
@@ -5236,11 +5236,13 @@ blockquote {
 }
 
 .title-component {
+  background-color: transparent;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 .header-content-block {
+  background-color: transparent;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
@@ -6298,6 +6300,7 @@ blockquote {
 }
 
 .header-heading {
+  background-color: transparent;
   text-transform: uppercase;
   font-family: JM Modern, Arial, sans-serif;
   font-size: 12vw;
