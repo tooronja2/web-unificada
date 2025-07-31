@@ -1,13 +1,13 @@
+
 $(document).ready(function() {
     var lastScrollTop = 0;
     var scrollDirection;
-    var isReinitializing = false;
 
     function trackScrollDirection() {
         var st = $(window).scrollTop();
         if (st > lastScrollTop) {
             scrollDirection = 'down';
-        } else if (st < lastScrollTop) {
+        } else {
             scrollDirection = 'up';
         }
         lastScrollTop = st;
@@ -15,37 +15,50 @@ $(document).ready(function() {
 
     $(window).on('scroll', trackScrollDirection);
 
-    function reinitWebflow() {
-        if (scrollDirection === 'up' && !isReinitializing) {
-            isReinitializing = true;
-            var scrollPosition = $(window).scrollTop();
+    function resetWebflowAnimations() {
+        if (scrollDirection === 'up') {
+            $('[data-w-id]').each(function() {
+                var el = $(this);
+                var initialDisplayStyle = el.css('display');
 
-            if (window.Webflow) {
-                window.Webflow.destroy();
-                window.Webflow.ready();
-                window.Webflow.require('ix2').init();
-            }
+                // Check if the element is not visible in the viewport
+                var rect = this.getBoundingClientRect();
+                var isVisible = (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
 
-            $('html, body').scrollTop(scrollPosition);
-
-            setTimeout(function() {
-                isReinitializing = false;
-            }, 500);
+                if (!isVisible) {
+                    // Temporarily hide and show the element to force Webflow to re-evaluate its state
+                    el.hide().show();
+                }
+            });
         }
     }
 
-    function debounce(func, wait) {
+    // Debounce function to limit how often resetWebflowAnimations is called
+    function debounce(func, wait, immediate) {
         var timeout;
         return function() {
             var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
             clearTimeout(timeout);
-            timeout = setTimeout(function() {
-                func.apply(context, args);
-            }, wait);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
         };
-    }
+    };
 
-    var debouncedReinit = debounce(reinitWebflow, 300);
+    var debouncedReset = debounce(resetWebflowAnimations, 250);
 
-    $(window).on('scroll', debouncedReinit);
+    $(window).on('scroll', function() {
+        if (scrollDirection === 'up') {
+            debouncedReset();
+        }
+    });
 });
