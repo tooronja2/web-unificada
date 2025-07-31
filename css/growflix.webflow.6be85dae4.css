@@ -12640,3 +12640,8 @@ blockquote {
   font-style: normal;
   font-display: swap;
 }
+
+/* Hide problematic service item image boxes */
+.service-item-image-box {
+  display: none !important;
+}
