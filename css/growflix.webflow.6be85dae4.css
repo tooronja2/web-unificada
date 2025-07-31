@@ -9047,6 +9047,7 @@ blockquote {
 
   ._3d-cube-container {
     transform: scale(.75);
+    display: none;
   }
 
   ._3d-cube-wrapper.service-page {
@@ -10730,6 +10731,7 @@ blockquote {
     justify-content: center;
     align-items: center;
     position: relative;
+    display: none;
   }
 
   ._3d-cube-left {
