@@ -12641,10 +12641,10 @@ blockquote {
   font-display: swap;
 }
 
-/* Hide specific problematic elements by their IDs */
-#w-node-f4f2b3aa-669a-2095-46a4-a011a76db4a7-32eb7fa3,
-#w-node-_0db04154-94a2-2ab9-54e5-1808b6d8e85c-32eb7fa3,
-#w-node-_274e5e8f-17e5-c380-ec46-f92e04a2b273-32eb7fa3,
-#w-node-b08430e3-aa8c-4baa-7c32-7584801ab65c-32eb7fa3 {
+/* Hide specific problematic elements using attribute selectors */
+div[id="w-node-f4f2b3aa-669a-2095-46a4-a011a76db4a7-32eb7fa3"],
+div[id="w-node-_0db04154-94a2-2ab9-54e5-1808b6d8e85c-32eb7fa3"],
+div[id="w-node-_274e5e8f-17e5-c380-ec46-f92e04a2b273-32eb7fa3"],
+div[id="w-node-b08430e3-aa8c-4baa-7c32-7584801ab65c-32eb7fa3"] {
   display: none !important;
 }
