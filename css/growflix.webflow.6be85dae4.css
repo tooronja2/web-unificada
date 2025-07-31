@@ -12654,3 +12654,133 @@ blockquote {
   bottom: auto !important;
   z-index: auto !important;
 }
+
+/* Pricing Section Styles */
+.pricing-section {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.pricing-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  z-index: -1;
+}
+
+.pricing-section h2,
+.pricing-section h3,
+.pricing-section h4,
+.pricing-section p,
+.pricing-section span,
+.pricing-section div {
+  color: #ffffff !important;
+}
+
+.pricing-section .pricing-cell-content {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.pricing-section .pricing-cell-content h4,
+.pricing-section .pricing-cell-content p,
+.pricing-section .pricing-cell-content span:not(.pricing-feature-checkmark) {
+  color: #000000 !important;
+}
+
+.pricing-section .pricing-feature-checkmark {
+  color: #00ff00 !important;
+}
+
+.pricing-section .primary-button {
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.pricing-section .primary-button:hover {
+  opacity: 0.8 !important;
+}
+
+/* Ensure text visibility in pricing cards */
+.pricing-cell-content-top h4,
+.pricing-cell-content-top p,
+.pricing-cell-content-top span,
+.pricing-cell-content-list span,
+.pricing-cell-content-footer button {
+  color: #000000 !important;
+}
+
+/* Checkmarks should stay green */
+.pricing-feature-checkmark,
+span[style*="color: #00ff00"] {
+  color: #00ff00 !important;
+}
+
+/* Additional Pricing Section Overrides */
+/* Override any other background colors for pricing section */
+section.pricing-section,
+section.pricing-section *:not(.pricing-cell-content):not(.primary-button[style*="background-color: #ffffff"]) {
+  background-color: transparent !important;
+}
+
+/* Ensure pricing section has solid black background */
+section.pricing-section {
+  background: #000000 !important;
+  position: relative !important;
+}
+
+/* Make sure all child elements of pricing section are visible */
+.pricing-section .padding-global,
+.pricing-section .container-large,
+.pricing-section .padding-section-large,
+.pricing-section .section-header,
+.pricing-section .pricing-tabs-wrapper,
+.pricing-section .pricing-grid {
+  background-color: transparent !important;
+}
+
+/* Force text colors in pricing section */
+.pricing-section .heading-style-h1,
+.pricing-section .heading-style-h3,
+.pricing-section .text-size-large {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+/* Button styling for tabs */
+.pricing-section .button-group button {
+  background-color: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+.pricing-section .button-group button.active-tab {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Pricing cards background */
+.pricing-section .pricing-cell-content {
+  background-color: #ffffff !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Make sure CTA section maintains black background */
+.cta-section {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.cta-section h2,
+.cta-section p {
+  color: #ffffff !important;
+}
