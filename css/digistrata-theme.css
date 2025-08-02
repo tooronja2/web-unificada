@@ -36,7 +36,6 @@ body {
 h1, h2, h3, h4, h5, h6, .heading-style-h1, .heading-style-h2, .heading-style-h3 {
   font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
   font-weight: 700;
-  vertical-align: baseline !important;
 }
 
 /* Primary buttons */
@@ -79,14 +78,9 @@ h1, h2, h3, h4, h5, h6, .heading-style-h1, .heading-style-h2, .heading-style-h3 
   color: var(--secondary-color);
 }
 
-/* Stats section - Garantía de color correcto */
+/* Stats section */
 .about-number {
-  color: #FFFFFF !important;
-  font-size: 4rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  color: var(--accent-color);
 }
 
 /* Case studies */
@@ -188,80 +182,54 @@ p, h1, h2, h3, h4, h5, h6, div, span, a {
 
 /* =========== CORRECCIONES CRÍTICAS DE MARCA =========== */
 
-/* ELIMINAR TODOS LOS COLORES VERDES NO AUTORIZADOS - Sistema de Blindaje */
+/* ELIMINAR TODOS LOS COLORES VERDES NO AUTORIZADOS */
 .pricing-feature-checkmark,
 span[style*="#00ff00"],
 *[style*="color: #00ff00"],
-*[style*="color: green"],
 *[style*="background-color: #00ff00"],
-*[style*="background-color: green"],
 .pricing-plan-button.is-popular {
   color: #FFFFFF !important;
   background-color: var(--primary-color) !important;
 }
 
-/* Corrección exhaustiva de bordes verdes en planes de pricing */
-.pricing-cell-content[style*="border: 2px solid #00ff00"],
-.pricing-cell-content[style*="border: 2px solid green"],
-.pricing-cell-content[style*="border-color: #00ff00"],
-.pricing-cell-content[style*="border-color: green"] {
+/* Corregir bordes verdes en planes de pricing */
+.pricing-cell-content[style*="border: 2px solid #00ff00"] {
   border: 2px solid var(--primary-color) !important;
 }
 
-/* Corregir etiquetas POPULAR - Blindaje total */
-span[style*="background-color: #00ff00"],
-span[style*="background-color: green"],
-span[class*="popular-tag"],
-span[class*="popular-label"],
-.label-popular,
-.tag-popular {
+/* Corregir etiquetas POPULAR */
+span[style*="background-color: #00ff00"] {
   background-color: var(--primary-color) !important;
   color: #FFFFFF !important;
 }
 
-/* Corregir fondos de secciones populares - Aspecto sofisticado */
+/* Corregir fondos de secciones populares */
 .pricing-cell-content-top.is-popular {
   background-color: rgba(0, 114, 198, 0.1) !important;
-  border-bottom: 1px solid rgba(0, 114, 198, 0.2) !important;
 }
 
-/* CORRECCIÓN TIPOGRÁFICA AVANZADA - Alineación perfecta de vocales acentuadas */
+/* CORRECCIÓN TIPOGRÁFICA - Alineación de vocales acentuadas */
 h1, h2, h3, h4, h5, h6, 
 .heading-style-h1, .heading-style-h2, .heading-style-h3,
-.service-text, .about-text, .pricing-level-wrapper h4,
-.heading-with-accent, [data-text*="Á"], [data-text*="É"], [data-text*="Í"], [data-text*="Ó"], [data-text*="Ú"] {
-  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "hlig" 1, "calt" 1;
+.service-text, .about-text, .pricing-level-wrapper h4 {
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "hlig" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.2;
   font-variant-ligatures: common-ligatures;
-  font-variant-numeric: lining-nums proportional-nums;
-  font-variant-position: normal;
-  font-variant-east-asian: normal;
-  font-variant-caps: normal;
-  font-optical-sizing: auto;
-  font-kerning: normal;
-  vertical-align: baseline !important;
 }
 
-/* Corrección específica para títulos con acentos - Blindaje total */
+/* Corregir específicamente títulos con acentos */
 .heading-style-h1[style*="font-size: 8rem"],
-.heading-style-h2,
-h1[data-text*="á"], h1[data-text*="é"], h1[data-text*="í"], h1[data-text*="ó"], h1[data-text*="ú"],
-h2[data-text*="á"], h2[data-text*="é"], h2[data-text*="í"], h2[data-text*="ó"], h2[data-text*="ú"],
-h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó"], h3[data-text*="ú"],
-.heading-with-accent {
+.heading-style-h2 {
   letter-spacing: -0.02em;
   line-height: 0.9;
-  vertical-align: baseline !important;
+  vertical-align: baseline;
   text-align: center;
-  display: inline-block;
-  position: relative;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 
 /* Mejores métricas para fuentes en español */
@@ -271,20 +239,12 @@ h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó
 }
 
 /* CORRECCIÓN DE ICONOS Y ELEMENTOS VISUALES */
-/* Reemplazar checks verdes por blancos con estilo profesional */
-.pricing-feature-checkmark::before,
-.pricing-feature-item span[style*="color: #FFFFFF"]::before {
+/* Reemplazar checks verdes por blancos */
+.pricing-feature-checkmark::before {
   content: "✓";
   color: #FFFFFF !important;
   font-weight: bold;
   font-size: 1rem;
-  display: inline-block;
-  background-color: var(--primary-color);
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  border-radius: 50%;
 }
 
 /* CORRECCIONES ADICIONALES PARA UX/UI */
@@ -342,36 +302,6 @@ h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó
   box-shadow: 0 20px 40px rgba(0, 114, 198, 0.15);
 }
 
-/* TAREA 3: REPARAR Y ESTILIZAR SECCIÓN DE PRECIOS */
-.pricing-feature-checkmark {
-  color: #FFFFFF !important;
-}
-
-.pricing-item.is-popular .pricing-cell-content {
-  border: 2px solid #0072C6 !important;
-}
-
-.pricing-item .popular-tag {
-  background-color: #0072C6 !important;
-  color: #FFFFFF !important;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.pricing-item.is-popular .pricing-plan-button {
-  background-color: #0072C6 !important;
-  color: #FFFFFF !important;
-}
-
-.pricing-item .pricing-plan-button {
-  border: 1px solid #FFFFFF !important;
-  background-color: transparent !important;
-  color: #FFFFFF !important;
-}
-
-
 /* =========== CORRECCIONES ESPECÍFICAS PARA ELEMENTOS IDENTIFICADOS =========== */
 
 /* Corrección para flechas de baja calidad - Reemplazar por SVG */
@@ -383,34 +313,6 @@ h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó
   height: 24px;
   background: none;
   color: #FFFFFF;
-  position: relative;
-}
-
-.arrow-icon::before,
-.project-arrow::before,
-.navigation-arrow::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 18px;
-  height: 2px;
-  background-color: currentColor;
-  transform: translate(-50%, -50%);
-}
-
-.arrow-icon::after,
-.project-arrow::after,
-.navigation-arrow::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: calc(50% + 4px);
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid currentColor;
-  border-right: 2px solid currentColor;
-  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .arrow-icon::before,
@@ -430,17 +332,14 @@ h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó
   height: auto;
   max-width: 100px;
   filter: brightness(0) invert(1); /* Convertir a blanco si es imagen */
-  transform: translateZ(0); /* Evitar pixelación */
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
 }
 
 /* CORRECCIÓN CRÍTICA: Galería de imágenes con mejor contraste */
-.gallery-section {
-  background-color: #333333 !important;
+.gallery-section,
+.work-showcase,
+.portfolio-grid {
+  position: relative;
+  background: #000000 !important;
 }
 
 /* Overlay para mejorar legibilidad sobre imágenes */
@@ -508,7 +407,7 @@ h3[data-text*="ACIÓN"],
 
 /* =========== ESPACIADO RÍTMICO Y CONSISTENTE =========== */
 
-/* Sistema de espaciado basado en múltiplos de 2rem - Ritmo visual coherente */
+/* Sistema de espaciado basado en múltiplos de 2rem */
 .section-spacing-small { margin-bottom: 2rem; }
 .section-spacing-medium { margin-bottom: 4rem; }
 .section-spacing-large { margin-bottom: 6rem; }
@@ -525,52 +424,7 @@ h3[data-text*="ACIÓN"],
   padding: 2rem 0;
 }
 
-/* Espaciado específico entre sección "PERSONALIZADO" y "GROWFLIX" */
-.section-personalizado + .section-growflix,
-.section-custom + .section-growflix {
-  margin-top: 4rem !important;
-  padding-top: 4rem !important;
-  position: relative;
-}
-
-.section-personalizado + .section-growflix::before,
-.section-custom + .section-growflix::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background-color: var(--primary-color);
-  border-radius: 2px;
-}
-
 /* =========== CORRECCIONES FINALES DE MARCA =========== */
-
-/* Estilos para la sección de precios */
-.pricing-feature-checkmark {
-    color: #FFFFFF !important;
-}
-
-.pricing-item .is-popular {
-    border: 2px solid #0072C6 !important;
-}
-
-.pricing-level-wrapper .label-popular {
-    background-color: #0072C6 !important;
-    color: #FFFFFF !important;
-}
-
-.pricing-plan-button.is-popular {
-    background-color: #0072C6 !important;
-    color: #FFFFFF !important;
-}
-
-.pricing-plan-button {
-    border: 1px solid #FFFFFF !important;
-    background-color: transparent !important;
-}
 
 /* Asegurar que NINGÚN verde escape */
 * {

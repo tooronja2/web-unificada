@@ -17,8 +17,7 @@ Todas las inconsistencias identificadas en el video han sido **ELIMINADAS** y re
 ### ✅ **DESPUÉS:** Paleta Unificada
 - ✅ **Color Principal**: Negro profundo (#000000)
 - ✅ **Texto**: Blanco puro (#FFFFFF)  
-- ✅ **Acento Único**: Azul intenso (#0072C6) 
-- ✅ **Sistema de Blindaje**: Detección y corrección automática de colores no permitidos
+- ✅ **Acento Único**: Azul intenso (#0072C6)
 - ✅ **Secundario**: Gris claro (#CCCCCC)
 
 ### 🔧 **Correcciones Específicas Aplicadas:**
