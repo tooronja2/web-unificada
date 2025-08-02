@@ -301,3 +301,150 @@ h1, h2, h3, h4, h5, h6,
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 114, 198, 0.15);
 }
+
+/* =========== CORRECCIONES ESPECÍFICAS PARA ELEMENTOS IDENTIFICADOS =========== */
+
+/* Corrección para flechas de baja calidad - Reemplazar por SVG */
+.arrow-icon,
+.project-arrow,
+.navigation-arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: none;
+  color: #FFFFFF;
+}
+
+.arrow-icon::before,
+.project-arrow::before {
+  content: "→";
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+/* Logo/firma de alta resolución - Preparado para SVG */
+.logo-signature,
+.brand-watermark {
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  filter: brightness(0) invert(1); /* Convertir a blanco si es imagen */
+}
+
+/* CORRECCIÓN CRÍTICA: Galería de imágenes con mejor contraste */
+.gallery-section,
+.work-showcase,
+.portfolio-grid {
+  position: relative;
+  background: #000000 !important;
+}
+
+/* Overlay para mejorar legibilidad sobre imágenes */
+.gallery-text-overlay,
+.service-category-text,
+.portfolio-overlay {
+  position: relative;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7) !important;
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Texto grande sobre imágenes con máximo contraste */
+.large-category-text,
+.section-title-overlay {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  position: relative;
+  z-index: 20;
+}
+
+/* Fondo específico para texto sobre galería */
+.text-behind-gallery {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)) !important;
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+/* =========== CORRECCIONES TIPOGRÁFICAS AVANZADAS =========== */
+
+/* Corrección específica para palabras con tildes detectadas */
+.title-with-accents,
+.service-title,
+.section-heading {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+/* Corrección específica para "OPTIMIZACIÓN", "ANÁLISIS", etc. */
+h1[data-text*="ACIÓN"],
+h2[data-text*="ACIÓN"],
+h3[data-text*="ACIÓN"],
+.heading-with-accent {
+  line-height: 1.1 !important;
+  vertical-align: text-bottom;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+/* Mejora para títulos grandes con acentos */
+.heading-style-h1 {
+  font-variant-position: normal;
+  baseline-shift: 0;
+  dominant-baseline: alphabetic;
+}
+
+/* =========== ESPACIADO RÍTMICO Y CONSISTENTE =========== */
+
+/* Sistema de espaciado basado en múltiplos de 2rem */
+.section-spacing-small { margin-bottom: 2rem; }
+.section-spacing-medium { margin-bottom: 4rem; }
+.section-spacing-large { margin-bottom: 6rem; }
+.section-spacing-xlarge { margin-bottom: 8rem; }
+
+/* Espaciado específico para evitar "vacíos desaprovechados" */
+.content-section {
+  margin-bottom: 6rem;
+  padding: 2rem 0;
+}
+
+.transition-section {
+  margin: 4rem 0;
+  padding: 2rem 0;
+}
+
+/* =========== CORRECCIONES FINALES DE MARCA =========== */
+
+/* Asegurar que NINGÚN verde escape */
+* {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+*[style*="green"],
+*[style*="#00ff00"],
+*[style*="#0f0"],
+*[class*="green"] {
+  color: #FFFFFF !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Asegurar que NINGÚN naranja escape */
+*[style*="orange"],
+*[style*="#F7941D"],
+*[style*="#ff8c00"],
+*[class*="orange"] {
+  color: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+}

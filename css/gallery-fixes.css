@@ -1,0 +1,148 @@
+/* ===== CORRECCIONES ESPECÍFICAS PARA GALERÍA DE IMÁGENES ===== */
+/* Solución para el problema de legibilidad en sección 01:15 - 01:22 */
+
+/* OPCIÓN A: Solución Minimalista con Overlay */
+.gallery-section-background {
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+}
+
+.gallery-text-container {
+  position: relative;
+  z-index: 100;
+  padding: 4rem 2rem;
+}
+
+.gallery-large-text {
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  
+  /* Máximo contraste sobre cualquier imagen */
+  text-shadow: 
+    4px 4px 0px #000000,
+    -4px -4px 0px #000000,
+    4px -4px 0px #000000,
+    -4px 4px 0px #000000,
+    8px 8px 16px rgba(0, 0, 0, 0.9);
+  
+  /* Fondo de emergencia si las sombras no son suficientes */
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.8) 0%, 
+    rgba(0, 0, 0, 0.6) 50%, 
+    rgba(0, 0, 0, 0.8) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding: 1rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Overlay oscuro sobre imágenes de fondo */
+.gallery-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* OPCIÓN B: Layout Estructurado (Grid) */
+.gallery-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+.gallery-text-column {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 3rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-images-column {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+/* Categorías específicas con colores de acento */
+.category-ecommerce {
+  color: #FFFFFF;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 2rem;
+}
+
+.category-strategies {
+  color: #FFFFFF;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 2rem;
+}
+
+.category-branding {
+  color: #FFFFFF;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 2rem;
+}
+
+/* Animaciones suaves para transiciones */
+.gallery-text-container,
+.gallery-images-column {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .gallery-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .gallery-large-text {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+  
+  .gallery-text-column {
+    padding: 2rem;
+  }
+}
+
+/* Corrección para imágenes que se mueven caóticamente */
+.moving-gallery-image {
+  animation: gentleFloat 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(0.5deg); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(-5px) rotate(-0.5deg); }
+}
+
+/* Pausar animaciones cuando el usuario prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .moving-gallery-image {
+    animation: none;
+  }
+}

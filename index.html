@@ -28,6 +28,7 @@
         <!-- Digistrata theme CSS -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/digistrata-theme.css">
+        <link rel="stylesheet" href="css/gallery-fixes.css">
         <style>
             /* Forzar fondo negro en toda la web */
             html, body, .section-wrapper, .page-wrapper, .main-wrapper, section, .section {
@@ -45,6 +46,21 @@
             .service-item-image video {
                 opacity: 0.8;
                 mix-blend-mode: luminosity;
+            }
+            
+            /* CORRECCIONES ADICIONALES CRÍTICAS */
+            /* Eliminar cualquier vestigio de colores no autorizados */
+            * {
+                --green-color: #FFFFFF !important;
+                --orange-color: #FFFFFF !important;
+            }
+            
+            /* Forzar corrección tipográfica en todos los títulos */
+            h1, h2, h3, .heading-style-h1, .heading-style-h2, .heading-style-h3 {
+                font-feature-settings: "kern" 1, "liga" 1, "calt" 1 !important;
+                text-rendering: optimizeLegibility !important;
+                line-height: 1.1 !important;
+                letter-spacing: -0.01em !important;
             }
         </style>
     </head>
