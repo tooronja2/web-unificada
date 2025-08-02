@@ -48,6 +48,38 @@
                 mix-blend-mode: luminosity;
             }
             
+            /* Correcciones críticas para la galería (01:15-01:22) */
+            .scroll-text, .large-category-text {
+                position: relative;
+                z-index: 10;
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+                background: rgba(0, 0, 0, 0.7) !important;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                display: inline-block;
+            }
+            
+            /* Correcciones específicas para números en About */
+            .about-number {
+                color: #FFFFFF !important;
+                font-weight: 700;
+            }
+            
+            /* Correcciones críticas para checks */
+            .pricing-feature-item span[style*="color: #00FF00"],
+            .pricing-feature-checkmark {
+                color: #FFFFFF !important;
+                background-color: #0072C6 !important;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
             /* CORRECCIONES ADICIONALES CRÍTICAS */
             /* Eliminar cualquier vestigio de colores no autorizados */
             * {
