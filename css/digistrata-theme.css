@@ -1,9 +1,9 @@
 /* Digistrata Theme CSS */
 :root {
-  /* Primary colors */
-  --primary-color: #0072C6;
-  --secondary-color: #00BFFF;
-  --accent-color: #F7941D;
+  /* Primary colors - Siguiendo la paleta oficial */
+  --primary-color: #0072C6; /* Color azul intenso autorizado para CTAs y elementos destacados */
+  --secondary-color: #CCCCCC; /* Gris claro para texto secundario */
+  --accent-color: #FFFFFF; /* Cambiado de naranja a blanco para números importantes */
   
   /* Text colors */
   --text-primary: #FFFFFF;
@@ -15,6 +15,10 @@
   --bg-white: #000000;
   --bg-dark: #000000;
   --bg-black: #000000;
+  
+  /* Color corrections for brand consistency */
+  --green-override: #FFFFFF; /* Verde neón reemplazado por blanco */
+  --orange-override: #FFFFFF; /* Naranja/dorado reemplazado por blanco */
 }
 
 /* Fondo negro global */
@@ -174,4 +178,126 @@ p, h1, h2, h3, h4, h5, h6, div, span, a {
 .text-shadow.second {
   background: transparent !important;
   opacity: 0.3;
+}
+
+/* =========== CORRECCIONES CRÍTICAS DE MARCA =========== */
+
+/* ELIMINAR TODOS LOS COLORES VERDES NO AUTORIZADOS */
+.pricing-feature-checkmark,
+span[style*="#00ff00"],
+*[style*="color: #00ff00"],
+*[style*="background-color: #00ff00"],
+.pricing-plan-button.is-popular {
+  color: #FFFFFF !important;
+  background-color: var(--primary-color) !important;
+}
+
+/* Corregir bordes verdes en planes de pricing */
+.pricing-cell-content[style*="border: 2px solid #00ff00"] {
+  border: 2px solid var(--primary-color) !important;
+}
+
+/* Corregir etiquetas POPULAR */
+span[style*="background-color: #00ff00"] {
+  background-color: var(--primary-color) !important;
+  color: #FFFFFF !important;
+}
+
+/* Corregir fondos de secciones populares */
+.pricing-cell-content-top.is-popular {
+  background-color: rgba(0, 114, 198, 0.1) !important;
+}
+
+/* CORRECCIÓN TIPOGRÁFICA - Alineación de vocales acentuadas */
+h1, h2, h3, h4, h5, h6, 
+.heading-style-h1, .heading-style-h2, .heading-style-h3,
+.service-text, .about-text, .pricing-level-wrapper h4 {
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "hlig" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+  font-variant-ligatures: common-ligatures;
+}
+
+/* Corregir específicamente títulos con acentos */
+.heading-style-h1[style*="font-size: 8rem"],
+.heading-style-h2 {
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  vertical-align: baseline;
+  text-align: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+/* Mejores métricas para fuentes en español */
+.service-text, .about-text {
+  font-variant-numeric: lining-nums;
+  vertical-align: baseline;
+}
+
+/* CORRECCIÓN DE ICONOS Y ELEMENTOS VISUALES */
+/* Reemplazar checks verdes por blancos */
+.pricing-feature-checkmark::before {
+  content: "✓";
+  color: #FFFFFF !important;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* CORRECCIONES ADICIONALES PARA UX/UI */
+
+/* Mejorar contraste en galería de imágenes */
+.service-item-image,
+.case-study-image,
+.gallery-image {
+  position: relative;
+}
+
+.service-item-image::before,
+.case-study-image::before,
+.gallery-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Mejorar legibilidad de texto sobre imágenes */
+.service-text,
+.case-name,
+.image-overlay-text {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+
+/* Espaciado consistente entre secciones */
+.section,
+.pricing-section,
+.service-section,
+.about-section {
+  margin-bottom: 8rem;
+}
+
+/* Mejorar espaciado en elementos de pricing */
+.pricing-grid {
+  gap: 3rem !important;
+}
+
+.pricing-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 114, 198, 0.15);
 }
