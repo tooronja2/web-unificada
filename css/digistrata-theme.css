@@ -36,6 +36,7 @@ body {
 h1, h2, h3, h4, h5, h6, .heading-style-h1, .heading-style-h2, .heading-style-h3 {
   font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
   font-weight: 700;
+  vertical-align: baseline !important;
 }
 
 /* Primary buttons */
@@ -227,7 +228,8 @@ span[class*="popular-label"],
 /* CORRECCIÓN TIPOGRÁFICA AVANZADA - Alineación perfecta de vocales acentuadas */
 h1, h2, h3, h4, h5, h6, 
 .heading-style-h1, .heading-style-h2, .heading-style-h3,
-.service-text, .about-text, .pricing-level-wrapper h4 {
+.service-text, .about-text, .pricing-level-wrapper h4,
+.heading-with-accent, [data-text*="Á"], [data-text*="É"], [data-text*="Í"], [data-text*="Ó"], [data-text*="Ú"] {
   font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "hlig" 1, "calt" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -240,6 +242,7 @@ h1, h2, h3, h4, h5, h6,
   font-variant-caps: normal;
   font-optical-sizing: auto;
   font-kerning: normal;
+  vertical-align: baseline !important;
 }
 
 /* Corrección específica para títulos con acentos - Blindaje total */
@@ -251,7 +254,7 @@ h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó
 .heading-with-accent {
   letter-spacing: -0.02em;
   line-height: 0.9;
-  vertical-align: baseline;
+  vertical-align: baseline !important;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -339,6 +342,36 @@ h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó
   box-shadow: 0 20px 40px rgba(0, 114, 198, 0.15);
 }
 
+/* TAREA 3: REPARAR Y ESTILIZAR SECCIÓN DE PRECIOS */
+.pricing-feature-checkmark {
+  color: #FFFFFF !important;
+}
+
+.pricing-item.is-popular .pricing-cell-content {
+  border: 2px solid #0072C6 !important;
+}
+
+.pricing-item .popular-tag {
+  background-color: #0072C6 !important;
+  color: #FFFFFF !important;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.pricing-item.is-popular .pricing-plan-button {
+  background-color: #0072C6 !important;
+  color: #FFFFFF !important;
+}
+
+.pricing-item .pricing-plan-button {
+  border: 1px solid #FFFFFF !important;
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+}
+
+
 /* =========== CORRECCIONES ESPECÍFICAS PARA ELEMENTOS IDENTIFICADOS =========== */
 
 /* Corrección para flechas de baja calidad - Reemplazar por SVG */
@@ -406,11 +439,8 @@ h3[data-text*="á"], h3[data-text*="é"], h3[data-text*="í"], h3[data-text*="ó
 }
 
 /* CORRECCIÓN CRÍTICA: Galería de imágenes con mejor contraste */
-.gallery-section,
-.work-showcase,
-.portfolio-grid {
-  position: relative;
-  background: #000000 !important;
+.gallery-section {
+  background-color: #333333 !important;
 }
 
 /* Overlay para mejorar legibilidad sobre imágenes */
@@ -517,6 +547,30 @@ h3[data-text*="ACIÓN"],
 }
 
 /* =========== CORRECCIONES FINALES DE MARCA =========== */
+
+/* Estilos para la sección de precios */
+.pricing-feature-checkmark {
+    color: #FFFFFF !important;
+}
+
+.pricing-item .is-popular {
+    border: 2px solid #0072C6 !important;
+}
+
+.pricing-level-wrapper .label-popular {
+    background-color: #0072C6 !important;
+    color: #FFFFFF !important;
+}
+
+.pricing-plan-button.is-popular {
+    background-color: #0072C6 !important;
+    color: #FFFFFF !important;
+}
+
+.pricing-plan-button {
+    border: 1px solid #FFFFFF !important;
+    background-color: transparent !important;
+}
 
 /* Asegurar que NINGÚN verde escape */
 * {
