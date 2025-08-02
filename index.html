@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang="es"> 
-    <head> 
+    <head>
+        <!-- Mantener los meta tags y preloads existentes -->
         <meta charset="UTF-8"> 
         <title>Web Unificada - 3 páginas consecutivas</title>         
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,38 +30,103 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/digistrata-theme.css">
         <link rel="stylesheet" href="css/gallery-fixes.css">
+        <link rel="stylesheet" href="css/visual-unification.css">
+    
+        <!-- Agregar estilos CSS unificados -->
         <style>
             /* Forzar fondo negro en toda la web */
             html, body, .section-wrapper, .page-wrapper, .main-wrapper, section, .section {
                 background-color: #000000 !important;
                 color: #FFFFFF !important;
             }
-            
+                
             /* Hacer transparentes los fondos de las animaciones de texto */
             .text-overflow-hidden, .heading-text-part, .text-shadow, 
             .scrolling-text-wrapper, .scroll-text-item, .heading-text-box {
                 background: transparent !important;
             }
-            
+                
             /* Asegurar que los vídeos tengan un overlay oscuro */
             .service-item-image video {
                 opacity: 0.8;
                 mix-blend-mode: luminosity;
             }
-            
-            /* CORRECCIONES ADICIONALES CRÍTICAS */
+                
             /* Eliminar cualquier vestigio de colores no autorizados */
             * {
                 --green-color: #FFFFFF !important;
                 --orange-color: #FFFFFF !important;
+                --blue-color: #FFFFFF !important;
+                --cyan-color: #FFFFFF !important;
             }
             
-            /* Forzar corrección tipográfica en todos los títulos */
+            /* Botones en blanco/gris en lugar de azul */
+            .pricing-plan-button.is-popular,
+            ._3d-button-wrapper,
+            .primary-button,
+            button.is-popular {
+                background-color: #FFFFFF !important;
+                color: #000000 !important;
+                border: none !important;
+            }
+            
+            /* Botones secundarios con borde blanco */
+            .primary-button:not(.active-tab),
+            button:not(.active-tab):not(.pricing-plan-button) {
+                background-color: transparent !important;
+                color: #FFFFFF !important;
+                border: 1px solid #FFFFFF !important;
+            }
+            
+            /* Tipografía unificada */
+            body, p, h1, h2, h3, h4, h5, h6, div, span, button, a {
+                font-family: 'Inter', 'Helvetica', sans-serif !important;
+                font-weight: normal !important;
+            }
+            
             h1, h2, h3, .heading-style-h1, .heading-style-h2, .heading-style-h3 {
-                font-feature-settings: "kern" 1, "liga" 1, "calt" 1 !important;
-                text-rendering: optimizeLegibility !important;
-                line-height: 1.1 !important;
+                font-weight: 500 !important;
                 letter-spacing: -0.01em !important;
+                text-rendering: optimizeLegibility !important;
+            }
+            
+            /* Ajustar colores de la sección de precios */
+            .pricing-cell-content {
+                background-color: #FFFFFF !important;
+            }
+            
+            .pricing-cell-content-top.is-popular {
+                background-color: rgba(255, 255, 255, 0.05) !important;
+            }
+            
+            .pricing-feature-checkmark {
+                color: #000000 !important;
+            }
+            
+            /* Corregir enlaces de footer */
+            footer a, .footer a {
+                color: #FFFFFF !important;
+            }
+            
+            /* Texto negro para contenido en fondos blancos */
+            .pricing-cell-content * {
+                color: #000000 !important;
+            }
+            
+            /* Bordes blancos en lugar de colores */
+            .pricing-item .pricing-cell-content.is-popular, 
+            .pricing-item .pricing-cell-content[style*="border"] {
+                border: 2px solid #FFFFFF !important;
+            }
+            
+            /* Ajustar bandas populares */
+            span[style*="background-color: #0072C6"] {
+                background-color: #333333 !important;
+            }
+            
+            /* Correcciones para textos destacados */
+            p[style*="background-color: #0072C6"] {
+                background-color: #333333 !important;
             }
         </style>
     </head>
@@ -2218,7 +2284,8 @@
 
                     // Initialize with dev web active
                     switchToDevWeb();
-                });
                 </script>
+                <script src="js/visual-fixer.js"></script>
             </body>             
+        </html>
         </html>

@@ -1,0 +1,117 @@
+/* Unificación visual para Digistrata */
+
+/* Fondo negro global */
+html, body, .section-wrapper, .page-wrapper, .main-wrapper, section, .section,
+.about-wrapper, .insights-wrapper, .service-section-main-box, .call-to-action-01 {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* Asegurar que los bloques de gradientes sean transparentes */
+[class*="gradient"], [class*="-gradient-"], [style*="gradient"] {
+    background: transparent !important;
+}
+
+/* Unificar tipografía */
+body {
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6,
+.heading-style-h1, .heading-style-h2, .heading-style-h3, 
+.heading-style-h4, .heading-style-h5, .heading-style-h6 {
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+/* Eliminar colores no deseados */
+.text-gradient, 
+.featured-cta-text, 
+.insight-big-number,
+.service-number {
+    background: none !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* Botones y elementos interactivos */
+.button, 
+button,
+.primary-button, 
+.pricing-plan-button,
+._3d-button {
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.primary-button:hover,
+.button:hover,
+button:hover {
+    opacity: 0.9;
+}
+
+/* Sección de servicios */
+.service-item-content h3,
+.section-header h2 {
+    color: #FFFFFF !important;
+}
+
+/* Correcciones para sección de insights */
+.insight-big-number,
+.insight-item-heading,
+.insight-number {
+    color: #FFFFFF !important;
+}
+
+/* Footer limpio */
+footer,
+.footer {
+    background-color: #000000 !important;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 40px;
+}
+
+footer a,
+.footer a,
+.footer-link {
+    color: #DDDDDD !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+.footer a:hover {
+    color: #FFFFFF !important;
+}
+
+/* Asegurar que el cursor personalizado sea visible */
+.cursor-wrap .cursor-core {
+    border-color: #FFFFFF !important;
+}
+
+.cursor-pointer {
+    background-color: rgba(255,255,255,0.2) !important;
+}
+
+/* Tablas de precios más limpias */
+.pricing-grid {
+    gap: 1.5rem !important;
+}
+
+.pricing-cell-content {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* Corrección acentos y caracteres especiales */
+.pricing-feature-item span, 
+.pricing-level-wrapper h4, 
+.pricing-item p {
+    font-feature-settings: "kern" 1, "liga" 1 !important;
+}
