@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     var lastScrollTop = 0;
     var scrollDirection;
@@ -59,6 +58,37 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
         if (scrollDirection === 'up') {
             debouncedReset();
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Fix for the letter "g" getting cut off in animated headings
+    const animatedHeadings = document.querySelectorAll('.insight-item-heading');
+    
+    animatedHeadings.forEach(function(heading) {
+        // Add padding to prevent text clipping
+        heading.style.paddingBottom = '6px';
+        heading.style.lineHeight = '1.2';
+        heading.style.overflow = 'visible';
+        
+        // If the heading contains text with descenders (g, j, p, q, y)
+        if (heading.textContent.match(/[gjpqy]/)) {
+            // Add extra padding at the bottom
+            heading.style.paddingBottom = '8px';
+            
+            // Adjust the container height if needed
+            const container = heading.closest('.insight-stat-col');
+            if (container) {
+                container.style.minHeight = 'calc(100% + 8px)';
+            }
+        }
+    });
+    
+    // Fix for pricing section accent marks
+    document.querySelectorAll('.heading-style-h4').forEach(function(element) {
+        if (element.textContent.includes('Ba')) {
+            element.innerHTML = 'Básico';
         }
     });
 });

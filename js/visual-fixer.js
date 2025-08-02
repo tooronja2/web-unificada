@@ -11,6 +11,63 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 3. Reordenar secciones si es necesario
     reorganizeSections();
+    
+    // 4. Fix font weights for paragraphs
+    document.querySelectorAll('p, .text-size-small').forEach(function(element) {
+        element.style.fontWeight = '400';
+    });
+    
+    // 5. Replace English text with Spanish in GROWFLIX section
+    const textReplacements = {
+        'Strategy': 'Estrategia',
+        'Branding': 'Marca',
+        'Advertising': 'Publicidad',
+        'Content': 'Contenido',
+        'Making Ideas Happen': 'Hacemos Realidad Tus Ideas',
+        'Success Stories': 'Casos de Éxito',
+        'Case Studies': 'Proyectos',
+        'Learn More': 'Saber Más',
+        'Browse all': 'Ver Todos'
+    };
+    
+    // Find and replace text in elements
+    document.querySelectorAll('h2, h3, div, span, a').forEach(function(element) {
+        Object.keys(textReplacements).forEach(function(english) {
+            if (element.textContent.includes(english)) {
+                element.textContent = element.textContent.replace(
+                    new RegExp(english, 'g'), 
+                    textReplacements[english]
+                );
+            }
+        });
+    });
+    
+    // 6. Fix pricing section accent marks
+    document.querySelectorAll('.pricing-level-wrapper h4').forEach(function(heading) {
+        if (heading.textContent.includes('Básico')) {
+            heading.textContent = 'Básico'; // Replace with proper accent
+        }
+    });
+    
+    // 7. Move pricing section to before the call-to-action section
+    const pricingSection = document.querySelector('.pricing-section');
+    const callToAction = document.querySelector('.call-to-action-01');
+    
+    if (pricingSection && callToAction && callToAction.parentNode) {
+        callToAction.parentNode.insertBefore(pricingSection, callToAction);
+    }
+    
+    // 8. Increase contrast for "Solicitar Custom" button
+    const customButtons = document.querySelectorAll('.text-align-center .primary-button');
+    customButtons.forEach(function(button) {
+        button.style.backgroundColor = '#FFFFFF';
+        button.style.color = '#000000';
+    });
+    
+    // 9. Fix all footer links to be white
+    document.querySelectorAll('.footer a, .footer .link-text').forEach(function(link) {
+        link.style.color = '#FFFFFF';
+    });
 });
 
 function fixAccents() {
