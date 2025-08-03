@@ -5107,7 +5107,7 @@ blockquote {
 }
 
 .section-home-header-01 {
-  background-color: #000000;
+  background-color: var(--grey-01);
   position: sticky;
   top: 0;
   overflow: clip;
@@ -5236,13 +5236,11 @@ blockquote {
 }
 
 .title-component {
-  background-color: transparent;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 .header-content-block {
-  background-color: transparent;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
@@ -5257,7 +5255,7 @@ blockquote {
 }
 
 .dash {
-  background-color: #000000;
+  background-color: #0d0d0d;
   width: 61.25%;
   height: 16px;
 }
@@ -6300,7 +6298,6 @@ blockquote {
 }
 
 .header-heading {
-  background-color: transparent;
   text-transform: uppercase;
   font-family: JM Modern, Arial, sans-serif;
   font-size: 12vw;
@@ -6351,45 +6348,19 @@ blockquote {
 }
 
 .service-wrapper._01 {
-  background-color: #ffffff;
+  background-color: var(--pink);
 }
 
 .service-wrapper._02 {
-  background-color: #000000;
+  background-color: var(--purple);
 }
 
 .service-wrapper._03 {
-  background-color: #ffffff;
+  background-color: var(--yellow);
 }
 
 .service-wrapper._04 {
-  background-color: #000000;
-}
-
-/* Text color adjustments for black backgrounds */
-.service-wrapper._02 .service-number,
-.service-wrapper._04 .service-number {
-  color: #ffffff;
-}
-
-.service-wrapper._02 .scroll-text,
-.service-wrapper._04 .scroll-text {
-  color: #ffffff;
-}
-
-.service-wrapper._02 .text-size-small,
-.service-wrapper._04 .text-size-small {
-  color: #ffffff;
-}
-
-.service-wrapper._02 .service-text,
-.service-wrapper._04 .service-text {
-  color: #ffffff;
-}
-
-.service-wrapper._02 .text-button,
-.service-wrapper._04 .text-button {
-  color: #ffffff;
+  background-color: var(--blue);
 }
 
 .section-home-intro-01 {
@@ -9047,7 +9018,6 @@ blockquote {
 
   ._3d-cube-container {
     transform: scale(.75);
-    display: none;
   }
 
   ._3d-cube-wrapper.service-page {
@@ -10731,7 +10701,6 @@ blockquote {
     justify-content: center;
     align-items: center;
     position: relative;
-    display: none;
   }
 
   ._3d-cube-left {
@@ -12639,148 +12608,4 @@ blockquote {
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-}
-
-/* Fix positioning of specific problematic elements */
-[id="w-node-f4f2b3aa-669a-2095-46a4-a011a76db4a7-32eb7fa3"],
-[id="w-node-_0db04154-94a2-2ab9-54e5-1808b6d8e85c-32eb7fa3"],
-[id="w-node-_274e5e8f-17e5-c380-ec46-f92e04a2b273-32eb7fa3"],
-[id="w-node-b08430e3-aa8c-4baa-7c32-7584801ab65c-32eb7fa3"] {
-  position: static !important;
-  transform: none !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  z-index: auto !important;
-}
-
-/* Pricing Section Styles */
-.pricing-section {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-.pricing-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000;
-  z-index: -1;
-}
-
-.pricing-section h2,
-.pricing-section h3,
-.pricing-section h4,
-.pricing-section p,
-.pricing-section span,
-.pricing-section div {
-  color: #ffffff !important;
-}
-
-.pricing-section .pricing-cell-content {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.pricing-section .pricing-cell-content h4,
-.pricing-section .pricing-cell-content p,
-.pricing-section .pricing-cell-content span:not(.pricing-feature-checkmark) {
-  color: #000000 !important;
-}
-
-.pricing-section .pricing-feature-checkmark {
-  color: #00ff00 !important;
-}
-
-.pricing-section .primary-button {
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-}
-
-.pricing-section .primary-button:hover {
-  opacity: 0.8 !important;
-}
-
-/* Ensure text visibility in pricing cards */
-.pricing-cell-content-top h4,
-.pricing-cell-content-top p,
-.pricing-cell-content-top span,
-.pricing-cell-content-list span,
-.pricing-cell-content-footer button {
-  color: #000000 !important;
-}
-
-/* Checkmarks should stay green */
-.pricing-feature-checkmark,
-span[style*="color: #00ff00"] {
-  color: #00ff00 !important;
-}
-
-/* Additional Pricing Section Overrides */
-/* Override any other background colors for pricing section */
-section.pricing-section,
-section.pricing-section *:not(.pricing-cell-content):not(.primary-button[style*="background-color: #ffffff"]) {
-  background-color: transparent !important;
-}
-
-/* Ensure pricing section has solid black background */
-section.pricing-section {
-  background: #000000 !important;
-  position: relative !important;
-}
-
-/* Make sure all child elements of pricing section are visible */
-.pricing-section .padding-global,
-.pricing-section .container-large,
-.pricing-section .padding-section-large,
-.pricing-section .section-header,
-.pricing-section .pricing-tabs-wrapper,
-.pricing-section .pricing-grid {
-  background-color: transparent !important;
-}
-
-/* Force text colors in pricing section */
-.pricing-section .heading-style-h1,
-.pricing-section .heading-style-h3,
-.pricing-section .text-size-large {
-  color: #ffffff !important;
-  background: transparent !important;
-}
-
-/* Button styling for tabs */
-.pricing-section .button-group button {
-  background-color: transparent !important;
-  border: 1px solid #ffffff !important;
-  color: #ffffff !important;
-}
-
-.pricing-section .button-group button.active-tab {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
-/* Pricing cards background */
-.pricing-section .pricing-cell-content {
-  background-color: #ffffff !important;
-  border-radius: 0.5rem !important;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1) !important;
-}
-
-/* Make sure CTA section maintains black background */
-.cta-section {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-
-.cta-section h2,
-.cta-section p {
-  color: #ffffff !important;
 }
