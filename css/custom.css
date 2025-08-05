@@ -2,3 +2,8 @@
 .padding-section-large {
   background-color: white;
 }
+
+/* Sobrescribir el color rosa de la primera tarjeta de servicio */
+.service-wrapper._01 {
+  background-color: white !important;
+}
