@@ -6348,7 +6348,20 @@ blockquote {
 }
 
 .service-wrapper._01 {
-  background-color: var(--pink);
+  background-color: var(--black);
+}
+
+.service-wrapper._01 * {
+  color: var(--white) !important;
+}
+
+.service-wrapper._01 .service-number,
+.service-wrapper._01 .scroll-text,
+.service-wrapper._01 .text-size-small,
+.service-wrapper._01 .service-text,
+.service-wrapper._01 .service-text p,
+.service-wrapper._01 .service-text strong {
+  color: var(--white) !important;
 }
 
 .service-wrapper._02 {
