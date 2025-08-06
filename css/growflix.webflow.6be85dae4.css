@@ -2064,7 +2064,7 @@ textarea.w-input, textarea.w-select {
   --dark: #232323;
   --yellow: #fad46e;
   --purple: #c1a8ff;
-  --pink: #fbbcd1;
+  --pink: #ffffff;
   --blue: #a6d5ff;
   --grey-03: #555;
 }
@@ -6348,19 +6348,45 @@ blockquote {
 }
 
 .service-wrapper._01 {
-  background-color: var(--pink);
+  background-color: var(--black);
+}
+
+.service-wrapper._01 * {
+  color: var(--white) !important;
+}
+
+.service-wrapper._01 .service-number,
+.service-wrapper._01 .scroll-text,
+.service-wrapper._01 .text-size-small,
+.service-wrapper._01 .service-text,
+.service-wrapper._01 .service-text p,
+.service-wrapper._01 .service-text strong {
+  color: var(--white) !important;
 }
 
 .service-wrapper._02 {
-  background-color: var(--purple);
+  background-color: var(--white);
 }
 
 .service-wrapper._03 {
-  background-color: var(--yellow);
+  background-color: var(--black);
+}
+
+.service-wrapper._03 * {
+  color: var(--white) !important;
+}
+
+.service-wrapper._03 .service-number,
+.service-wrapper._03 .scroll-text,
+.service-wrapper._03 .text-size-small,
+.service-wrapper._03 .service-text,
+.service-wrapper._03 .service-text p,
+.service-wrapper._03 .service-text strong {
+  color: var(--white) !important;
 }
 
 .service-wrapper._04 {
-  background-color: var(--blue);
+  background-color: var(--white);
 }
 
 .section-home-intro-01 {
